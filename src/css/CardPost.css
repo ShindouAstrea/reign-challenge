@@ -1,4 +1,84 @@
 
+
+@media only screen and (max-width: 550px){
+  .RectanglePost {
+    width: auto;
+    height: auto;
+    margin: 30px 40px 30px 150px;
+    padding-top: 26px; 
+    opacity: 0.8;
+    border-radius: 6px;
+    border: solid 1px #979797;
+    background-color: #fff;
+    position:relative;
+    }
+    .RectanglePost:hover{
+      opacity: 0.4;
+    }
+    .PostContent {
+      list-style-type: none;
+    }
+    .TextContent{
+      width: 440px;
+      height: auto;
+      margin:auto;
+      font-family: Roboto;
+      justify-items: center;
+      position: relative;
+      justify-content: center;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.43;
+      letter-spacing: 0.25px;
+      color: #6b6b6b;
+    }
+    .-hours-ago-by-autho {
+      width: 107px;
+      height: 13px;
+      margin: 2px 309px 7px 8px;
+      font-family: Roboto;
+      font-size: 11px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #767676;
+    }
+    .RectangleFav{
+      width: 68px;
+      height: 90px;
+      margin: 0 0 0 16px;
+      padding: 35px 22px 33px;
+      opacity: 0.06;
+      border-radius: 6px;
+      border: solid 1px black;
+      background-color: black;
+    }
+    img.iconTime {
+      width: 16px;
+      height: 16px;
+      margin: 0 8px 6px 0;
+      object-fit: contain;
+    }
+    svg.logoHeart {
+      width: 24px;
+      height: 22px;
+      object-fit: contain;
+      cursor:pointer ;
+      color:black ;
+      position: absolute;
+      fill:black ;
+      border: red;
+    }
+    img.logoHeart:hover{
+      color:black;
+  }
+}
+@media only screen and (min-width: 560px){
 .RectanglePost {
   width: 550px;
   height: 90px;
@@ -8,21 +88,23 @@
   border-radius: 6px;
   border: solid 1px #979797;
   background-color: #fff;
+  position:relative;
   }
 .RectanglePost:hover{
   opacity: 0.4;
-  background-color: blue;
 }
 .PostContent {
   list-style-type: none;
-  cursor: pointer;
-  
 }
 .TextContent{
   width: 440px;
-  height: 20px;
-  margin: 6px 0 0;
+  height: auto;
+  margin:auto;
   font-family: Roboto;
+  justify-items: center;
+  position: relative;
+  justify-content: center;
+  text-align: center;
   font-size: 14px;
   font-weight: 500;
   font-stretch: normal;
@@ -54,18 +136,23 @@
   border: solid 1px black;
   background-color: black;
 }
-.iconmonstr-favorite-3 {
-  width: 24px;
-  height: 22px;
-  object-fit: contain;
-  cursor: pointer;
-}
-.iconmonstr-favorite-3:active :after {
-  color: green ;
-}
 img.iconTime {
   width: 16px;
   height: 16px;
   margin: 0 8px 6px 0;
   object-fit: contain;
+}
+svg.logoHeart {
+  width: 24px;
+  height: 22px;
+  object-fit: contain;
+  cursor:pointer ;
+  color:black ;
+  position: absolute;
+  fill:black ;
+  border: red;
+}
+img.logoHeart:hover{
+  color:black;
+}
 }
