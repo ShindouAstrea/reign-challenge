@@ -1,0 +1,26 @@
+.Row{
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left:auto;
+  background-color: green ;
+}
+.Rectangle {
+width: 98px;
+height: 31px;
+padding: 3px 39px 0 40px;
+border-radius: 2px;
+border: solid 1px #1797ff;
+
+}
+.Text{
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  text-align: center;
+  color: #606060;
+}
