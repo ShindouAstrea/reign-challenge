@@ -1,13 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import './css/Buttons.css'
-import SelectorFav from './components/SelectorFav';
-import {Button} from 'react-bootstrap';
-import {BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom';
+import {Container,Row,Col } from 'react-bootstrap';
+import SelectorRoute from './components/SelectorRoute';
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import AllPost from './pages/AllPost';
 import FavPost from './pages/FavPost';
-import {Pagination} from '@mui/material';
-import React, { useEffect,useState } from 'react';
+import React from 'react';
 
 function App() {
 
@@ -17,18 +14,24 @@ function App() {
       <div className="Rectangle-2-Copy">
         <span className="HACKER-NEWS Text-Style">HACKER NEWS</span>
       </div>
-      
-      
-        <Router>
-          <SelectorFav/>
-          <div className="ContainerPosts">
-        {/* Links for all the routes */}
-            <Routes>
-              <Route path="All" element={<AllPost />}/>
-              <Route path="Faves" element={<FavPost/>}/>
-            </Routes>
-          </div>
-        </Router>
+        <Container>
+        <Row>
+            <Col>
+              <BrowserRouter>
+              <Routes>
+                <Route path="/" element ={<SelectorRoute/>}>
+                  <Route index element={<AllPost />}/>
+                  <Route path="Faves" element={<FavPost/>}/>
+                </Route>
+              </Routes>
+              </BrowserRouter>
+            </Col>
+            
+          </Row>
+        </Container>
+          
+          
+       
     </div>
   );
 }
