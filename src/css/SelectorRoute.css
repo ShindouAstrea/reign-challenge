@@ -1,9 +1,9 @@
-.Row{
+.Buttons{
   justify-content: center;
   align-items: center;
-  margin-right: auto;
-  margin-left:auto;
-  background-color: green ;
+  justify-items: center;
+  margin-right: 0;
+  margin-left:0;
 }
 .Rectangle {
 width: 98px;
