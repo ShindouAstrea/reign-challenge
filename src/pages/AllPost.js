@@ -19,7 +19,7 @@ export default function AllPost(){
   const [url,setUrl]=useState(`https://hn.algolia.com/api/v1/search_by_date?page=0`);
   const[arrayPost,setPost]=useState([]);
   const [numberPages,setNumber]=useState();
-  const [page, setPage] = React.useState(1);
+  const [page, setPage] = useState(1);
   const handleChange = (event, value) => {
     setPage(value);
     setUrl(`https://hn.algolia.com/api/v1/search_by_date?query=&page=${value-1}`)
@@ -30,15 +30,16 @@ export default function AllPost(){
      * @param {string} url the get url from hacker news api
      * @returns {Array} An Array with items copied from the response JSON.
      */
-    const getPosts =(url)=>{
+    const getPosts=(url)=>{
       fetch(url)
       .then(response=>response.json())
-      .then(data=> {setNumber((data).nbPages);setPost((data).hits)})
-      .catch(error=>console.log(error))
-    } ;
-    useEffect(()=>{
+      .then((data)=> {setNumber(data.nbPages);setPost(data.hits)})
+      .catch(error=>console.log(error));
+    };
+
+    useEffect(() =>{
       getPosts(url);
-    },[url])
+    },[url]);
     return(
       <Row>
         <SelectorDropDown/>
