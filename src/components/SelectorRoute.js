@@ -7,8 +7,9 @@ import {Link,Outlet} from 'react-router-dom';
 
 export default function SelectorRoute(){
     return(
-            <Row>
-                    <Col>
+            <Row >
+                <div className="Buttons">
+                        <Col>
                         <Link className= "Rectangle" to="/">
                                 <span className="Text">All</span>
                         </Link>
@@ -18,6 +19,9 @@ export default function SelectorRoute(){
                         </Link>
                     </Col>
                     <Outlet/>
+
+                </div>
+                    
             </Row>
            
     );
