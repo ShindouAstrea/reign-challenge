@@ -1,6 +1,7 @@
 import React from "react";
 // import logoHeart from "../assets/logoHeart.svg";
 import iconTime from "../assets/iconTime.svg"
+import logoHeart from '../assets/logoHeart.svg';
 import {Col,Row} from "react-bootstrap";
 import '../css/CardPost.css';
 
@@ -12,10 +13,9 @@ export default function CardPost({item}){
        window.open(item.story_url)
     };
     return(
-        <div>
-            <div onClick={handleClick} className="RectanglePost" >
-                <Row>
-                    <Col>
+        <Row>
+            <div   >
+                    <Col onClick={handleClick} className="RectanglePost">
                         <ul className="PostContent">
                             <li>
                                 <img src={iconTime}
@@ -23,12 +23,18 @@ export default function CardPost({item}){
                                     className="iconTime"></img>
                                 <span className="-hours-ago-by-autho Text-Style-2">{postTime} ago by {item.author}</span>
                             </li>
-                            <li><span className="TextContent">{item.story_title}</span></li>
+                            <li><span >{item.story_title}</span></li>
                         </ul>
-                    </Col> 
-                </Row>
+                    </Col>
+                    <Col>
+                    <svg
+                        src={logoHeart}
+                        alt="logoHeart"
+                        className="logoHeart"
+                    />
+                    </Col>
             </div>
-        </div>      
+        </Row>      
     );
 }
 /**
