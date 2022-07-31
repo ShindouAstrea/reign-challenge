@@ -29,16 +29,18 @@ export default function AllPost(){
      * the response  json has 20 elements per page.
      * @param {string} url the get url from hacker news api
      * @returns {Array} An Array with items copied from the response JSON.
+     * 
      */
-    const getPosts=(url)=>{
+     const getPosts=(url)=>{
       fetch(url)
       .then(response=>response.json())
       .then((data)=> {setNumber(data.nbPages);setPost(data.hits)})
       .catch(error=>console.log(error));
     };
-
     useEffect(() =>{
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       getPosts(url);
+      
     },[url]);
     return(
       <Row>

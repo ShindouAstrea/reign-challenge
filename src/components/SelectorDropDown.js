@@ -25,9 +25,9 @@ export default function SelectorDropDown(){
       const getPosts =(url)=>{
         fetch(url)
         .then(response=>response.json())
-        .then(data=> {setPost((data).hits);console.log(arrayPost)})
+        .then((data)=> {setPost(data.hits)})
         .catch(error=>console.log(error))
-      } ;
+      };
       useEffect(()=>{
         getPosts(url);
       },[url])
